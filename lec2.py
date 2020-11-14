@@ -14,7 +14,6 @@
 # else:
 #     print("-1 -1")
 
-<<<<<<< HEAD
 # n, k = map(int, input().split())
 # a = [int(i) for i in input().split()]
 # f = [0]*n
@@ -34,17 +33,13 @@
 #         i+=1
 # print("-1 -1")
 
-#George and Round
-=======
 # George and Round
->>>>>>> d6aa37f9f9e97e478d41b7ef5a41b74caf9e83d7
 # n, m = map(int, input().split())
 # a = [int(i) for i in input().split()]
 # b = [int(j) for j in input().split()]
 # pointer_a = 0
 # pointer_b = 0
 # while pointer_a < n and pointer_b < m:
-<<<<<<< HEAD
 #     if a[pointer_a] <= b[pointer_b]: #Lack of number with complexity b
 #         pointer_a+=1
 #     pointer_b+=1
@@ -77,7 +72,6 @@ for i in range(n):
     l.remove(draw_card)
 print(s,d)
 
-=======
 #     if a[pointer_a] <= b[pointer_b]:  # Lack of number with complexity b
 #         pointer_a += 1
 #     pointer_b += 1
@@ -127,4 +121,3 @@ while j < len(b) and i < len(a):
 print(len(l)) #Number of maximum people
 for k in l:
     print(k[0], k[1])
->>>>>>> d6aa37f9f9e97e478d41b7ef5a41b74caf9e83d7
