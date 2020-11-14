@@ -1,9 +1,5 @@
 # Bishu and his Girlfriend
 
-n = int(input())
-graph = []
-
-
 def dfs(start):
     visited = [False] * n
     stack = []
@@ -17,10 +13,10 @@ def dfs(start):
                 visited = True
                 stack.append(v)
 
-
-for i in range(0, n-1):
-    u, v = input().split()
-    u, v = int(u), int(v)
+n = int(input())
+graph = []
+for i in range(0, n):
+    u,v = map(int,input().split())
     graph[u].append(v)
     graph[v].append(u)
 
