@@ -94,3 +94,28 @@ def top(self):
 # for i, j, k in data:
 #     print(j, k)
 
+#Add All
+import heapq
+
+while True:
+    n = int(input())
+    Q = list(map(int, input().split()))
+    heapq.heapify(Q)
+    total = 0
+    cost = 0
+
+    while len(Q) > 1:
+        total = Q[0]
+        heapq.heappop(Q)
+
+        total += Q[0]
+        heapq.heappop(Q)
+
+        cost+=total
+        heapq.heappush(Q,total)
+    print(cost)
+    if n == 0:
+        break
+
+
+
