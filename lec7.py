@@ -35,7 +35,7 @@ def __init__(self):
     self.h = []
 
 
-def minHeapify(self,i):
+def minHeapify(self, i):
     smallest = i
     left = 2 * i + 1
     right = 2 * i + 2
@@ -56,54 +56,66 @@ def buildHeap(n):
 def top(self):
     return self.h[0]
 
-#QHeap 1 Hackerrank
+
+# QHeap 1 Hackerrank
+
+# from heapq import heappush, heappop
 #
-# import heapq
 # n = int(input())
 # heap = []
+# lookup = set()
 # for i in range(n):
-#     Q = list(map(int, input().split()))
-#     type = Q[0]
-#     if type == 1:
-#         heapq.heappush(heap, Q[1])
-#     elif type == 2:
-#         root = heap[0]
-#         heap.remove(Q[1])
-#         if root == Q[1]:
-#             heapq.heapify(heap)
-#     elif type == 3:
-#         print(heap[0])
+#     q = list(map(int, input().split()))
+#     if q[0] == 1:
+#         heappush(heap, q[1])
+#         lookup.add(q[1])
 #
-# import heapq
-# heap = []
-# N = int(input())
-# di = dict()
-# for i in range(N):
-#     Q = input().split()
-#     if Q[0] == '1':
-#         Q = int(Q[1])
-#         di[Q] = 0
-#         heapq.heappush(heap, Q)
-#     elif Q[0] == '2':
-#         Q = int(Q[1])
-#         di[Q] = 1
+#     elif q[0] == 2:
+#         lookup.discard(q[1])
 #     else:
-#         while di[heap[0]] == 1:
-#             heapq.heappop(heap)
+#         while heap[0] not in lookup:
+#             heappop(heap)
+#
 #         print(heap[0])
 
-#Roy and Trending Topics
+# Roy and Trending Topics
 
+# import heapq
+# n = int(input())
+# ls = []
+# for _ in range(n):
+#     id, z, p, l, c, s = map(int, input().split())
+#     z_score = p * 50 + l * 5 + c * 10 + s * 20
+#     change = z_score - z
+#     ls.append([change, id, z_score])
+#
+# data = heapq.nlargest(5, ls)
+#
+# for i, j, k in data:
+#     print(j, k)
+
+#Add All
 import heapq
-n = int(input())
-ls = []
-for _ in range(n):
-    id, z, p, l, c, s = map(int, input().split())
-    z_score = p * 50 + l * 5 + c * 10 + s * 20
-    change = z_score - z
-    ls.append([change, id, z_score])
 
-data = heapq.nlargest(5, ls)
+while True:
+    n = int(input())
+    Q = list(map(int, input().split()))
+    heapq.heapify(Q)
+    total = 0
+    cost = 0
 
-for i, j, k in data:
-    print(j, k)
+    while len(Q) > 1:
+        total = Q[0]
+        heapq.heappop(Q)
+
+        total += Q[0]
+        heapq.heappop(Q)
+
+        cost+=total
+        heapq.heappush(Q,total)
+    print(cost)
+    if n == 0:
+        break
+
+
+
