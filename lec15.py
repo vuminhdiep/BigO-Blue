@@ -7,14 +7,40 @@ class Node:
         self.dist = dist
     def __lt__(self, other):
         return self.dist <= other.weight
-n, m = map(int,input().split())
-graph = []
-for i in range(m):
-    u,v,w = map(int,input().split())
-    u -= 1
-    v -= 1
-    graph[u].append(Node(v, w))
-    graph[v].append(Node(u, w))
+def Prim(start):
+    
+    pq = queue.PriorityQueue()
+    pq.put(Node(start,0))
+    dist[start] = 0
+    while pq.empty() == False:
+        top = pq.get()
+        u = top.index
+        visited[u] = True
+        for neighbor in graph[u]:
+            v = neighbor.index
+            w = neighbor.dist
+            if visited[v] == False and w < dist[v]:
+                dist[v] = w
+                pq.put(Node(v, w))
+                path[v] = u
+    res = 0
+    for i in range(n):
+        if visited[i] == True:
+            res += dist[i]
+    return res
 
-res = Prim(0)
-print(res)
+if __name__ == '__main__':
+    n, m = map(int,input().split())
+    graph = [[] for i in range(n)]
+    dist = [INF for i in range(n)]
+    path = [-1 for i in range(n)]
+    visited = [False for i in range(n)]
+    for i in range(m):
+        u,v,w = map(int,input().split())
+        u -= 1
+        v -= 1
+        graph[u].append(Node(v, w))
+        graph[v].append(Node(u, w))
+
+    res = Prim(0)
+    print(res)
