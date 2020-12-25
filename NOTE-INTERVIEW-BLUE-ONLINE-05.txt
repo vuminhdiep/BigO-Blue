@@ -1,0 +1,37 @@
+﻿NOTE INTERVIEW BLUE ONLINE 05
+    1. Chuẩn bị resume
+    • Chuẩn bị nội dung: chuẩn bị trước 3-6 tháng
+    • Viết resume: https://www.careercup.com/resume 
+    2. Chuẩn bị kiến thức interview
+    • Interviewbit.com (100 – 200 bài)
+    • Leetcode.com (200 – 300 bài) 50-100-50
+    • Thời gian cho mỗi bài:
+        ◦ 30p nếu không có ý tưởng
+        ◦ 60 – 120p nếu có ý tưởng
+    3. Apply CV:
+    • Apply trực tiếp trên trang career
+        ◦ Tỉ lệ nhận CV: <1%
+    • Tham gia kì thi: tỉ lệ 30-50%
+    • Referral: >80%
+    4. Mock interview
+    • https://www.pramp.com/#/
+    • https://www.algoexpert.io/product
+    • https://interviewing.io/
+    5. Quy trình phỏng vấn
+    • Pre interview (online assigment) (45-120p)
+    • Interview 1 (phone) khoảng 2 bài, độ khó easy- easy-medium
+    • Interview 2 (phone), easy, medium
+----------------------------- intern -----------------------
+    • Interview 3: intern (phone, optional), fulltime (onsite)
+    • Interview 4: fulltime (onsite), coding
+    • Interview 5-6: fulltime (onsite): behavior, system design, …
+---------------------------- Fulltime ------------------------
+Host matching
+    6. Hiring committee
+    • No hire: rớt
+    • Leaning towards no hire: tốt, rớt
+    • Leaning towards to hire: tốt, có khả đậu
+    • Hire: đậu
+    7. VISA
+    • https://www.myvisajobs.com/Reports/2020-H1B-Visa-Sponsor.aspx
+    • 
