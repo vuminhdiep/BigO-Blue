@@ -1,0 +1,65 @@
+#Cách 1: Dùng 1 mảng đánh dấu
+- Dùng existed, đánh dấu những số mà đã xuất hiện trong mảng num
+- B1: khởi tạo existed có n + 1 phần tử, giá trị False
+- B2: Duyệt qua mảng nums, cho existed[nums[i]] là True
+- B3: Xuất phần tử có existed là False
+    
+Code:
+    n = nums.size()
+    existed = [False] * (n + 1)
+    for i = 0 to n - 1:
+        existed[nums[i]] = True
+        
+    for i = 0 to n:
+        if existed[nums[i]] == False:
+            return i
+Time complexity: O(n)
+Space complexity: O(n)
+        
+#Cách 2: Tính tổng
+- Tính tổng từ 1 đến n: sumN = n * (n + 1) / 2
+- Tính tổng tất cả phần tử trong mảng nums: sumA
+- Kết quả bài toán: sumN - sumA
+
+VD: nums = [3,0,1]
+sumN = 1 + 2 + 3 = 6
+sumA = 3 + 1 = 4
+ans = sumN - sumA = 2
+
+Code:
+    n = nums.size()
+    sumN = n * (n + 1) // 2
+    sumA = 0
+    for i = 0 to n:
+        sumA += nums[i]
+    return sumN - sumA
+TIme complexity: O(n)
+Space: O(1)
+
+#Cách 3: Dùng tính chất phép XOR
+1 ^ 1 = 0
+0 ^ 0 = 0
+1 ^ 0 = 1
+
+=> x ^ x = 0
+VD: 101 ^ 101 = 0
+
+VD1: nums = [3,0,1]
+    
+0 ^ 1 ^ 2 ^ 3 ^ 3 ^ 0 ^ 1 = 2 
+- Xor các số từ 1 đến N: xorN
+- Xor các số trong mảng nums: xorA
+- Kết quả bài toán: xorN ^ xorA
+
+Code:
+    n = nums.size()
+    xorN = xorA = 0
+    for i = 1 to N:
+        xorN = xorN ^ i
+        
+    for i = 0 to N - 1:
+        xorA = xorA ^ nums[i]
+        
+    return xorN ^ xorA
+Time: O(N)
+Space: O(1)

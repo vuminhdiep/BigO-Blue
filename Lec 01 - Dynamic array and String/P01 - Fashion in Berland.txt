@@ -1,0 +1,47 @@
+ ghi chú:
+ - a[i] = 0 nếu không cài, 1 nếu được cài
+
+Ý tưởng:
+có 2 trường hợp:
+ - Số nút áo bằng 1
+    a[0] = 1
+ - Số nút áo lớn hơn 1
+    Số phần tử bằng 1 là N-1 (hay số phần tử 0 là 1)
+    -> Nếu số phần tử bằng 1 là N-1 thì kết quả là YES, ngược lại NO
+
+Pseudo code
+   input N
+   input array A
+   if N == 1:
+      if A[0] == 1 -> YES
+      else:        -> NO
+   else (N > 1):
+       cnt = 0
+       for i in array A
+          if A[i] == 1:
+             increase cnt by 1
+       if cnt == N-1   -> YES
+       else            -> NO
+
+Python
+n = int(input())
+a = list(map(int, input().split()))
+if n == 1:
+    if a[0] == 1:
+        print('YES')
+    else:
+        print('NO')
+else:
+    cnt = 0
+    for i in range(n):
+        if a[i] == 1:
+            cnt += 1
+    if cnt == n-1:
+        print('YES')
+    else:
+        print('NO')
+
+Bonus đọc mảng số nguyên trên dòng trong python:
+
+'1 0 1' -> ['1', '0', '1'] -> (1, 0, 1) -> [1, 0, 1]
+list(map(int, input().split()))
